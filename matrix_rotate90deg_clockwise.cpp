@@ -25,15 +25,23 @@ int main(){
     }
 
     //90deg Rotation loop
+    int x = 0, y;
+    for(int i=2; i>=0; i--){
+        y = 0;
+        for(int j=2; j>=0; j--){
+            rotate90[x][y] = newMatrix[j][i];
+            y++;
+        }
+        x++;
+    }
+
     cout <<endl;
     cout<<"Rotated 90 deg:"<<endl;
-    for(int i=2; i>=0; i--){
-        for(int j=2; j>=0; j--){
-            rotate90[i][j] = newMatrix[j][i];
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
             cout <<rotate90[i][j]<<" ";
         }
         cout <<endl;
-
     }
 
 return 0;
